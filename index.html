@@ -12,6 +12,7 @@
     padding: 0%;
     box-sizing: border-box;
 }
+/*style for the navbar layout*/
 .navbar{
     width: 100%;
     position: fixed;
@@ -35,6 +36,7 @@ padding: 5px;
     background-color: white;
     color: black;
 }
+/*style for the main dropdown*/
 .menu{
     position: absolute;
 right: 0;
@@ -56,6 +58,7 @@ right: 0;
     color: rgb(0, 0, 0); 
     cursor: pointer;  
 }
+/*style for the dropdown under the service on smaller screen*/
 .service{
     position: absolute;
     right: 105px;
@@ -77,15 +80,18 @@ right: 0;
     color: rgb(0, 0, 0); 
     cursor: pointer; 
 }
+/*for the dropdown bar*/
 .fa{
     display: none;
 }
+/*style for the header layout*/
 .header{
     height: 30vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+/*style for the body layout*/
 .body{
     height: 50vh;
     display: flex;
@@ -94,6 +100,7 @@ right: 0;
     background-color: black;
     color: white;
 }
+/*style for the footer layout*/
 .footer{
     height: 40vh;
     display: flex;
@@ -102,7 +109,7 @@ right: 0;
     background-color: #333;
     color: white;
 }
-
+/*@media for smaller screen*/
 
 @media screen and (max-width:650px) {
     .navbar ul li:not(.fa){
@@ -116,21 +123,26 @@ right: 0;
 </style>
 
 <script>
+    /*js for showing the main dropdown*/
 function show_drop(){
     document.getElementById("drop").style.display="block"
 }
+/*js for showing the dropdown under the service on smaller screens*/
 function show_activity(){
     document.getElementById("activity").style.display="block"
 }
+/*js for hidding the main dropdown*/
 function hide_drop(){
     document.getElementById("drop").style.display="none"
 }
+/*js for hidding the dropdown under the service on smaller screens*/
 function hide_activity(){
     document.getElementById("activity").style.display="none"
 }
 </script>
 </head>
 <body>
+    <!--this the navbar-->
   <div class="navbar">
     <h1>Logo</h1>
 
@@ -146,6 +158,7 @@ function hide_activity(){
   <br>
   <br>
   <br>
+  <!--this is the main dropdown-->
     <div id="drop" class="menu">
         <ul>
             <li onclick="hide_activity()">home</li>
@@ -154,6 +167,7 @@ function hide_activity(){
             <li onclick="show_activity()">service</li>
         </ul>
     </div>
+    <!--this is the dropdown under the service on smaller screen-->
 <div onclick="hide_drop(),hide_activity()" id="activity" class="service">
     <ul>
         <li>coding</li>
@@ -161,14 +175,19 @@ function hide_activity(){
         <li>robotics</li>
     </ul>
 </div>
+<!--this has the header layout-->
 <div class="header">
 <h1>Header</h1>
 </div>
+<!--this has the body layout-->
 <div class="body">
     <h1>Content/Body</h1>
 </div>
+<!--this has the footer layout-->
 <div class="footer">
     <h1>Footer</h1>
 </div>
+
+
 </body>
 </html>
