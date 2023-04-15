@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+<style>
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.navbar{
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: black;
+    color: white;
+    align-items: center;
+}
+.navbar ul{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+.navbar ul li{
+padding: 5px;
+}
+.navbar ul li:hover{
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}
+.menu{
+    position: absolute;
+right: 0;
+    margin: 5px;
+    display: none;
+}
+.menu ul{
+    padding: 5px;
+    list-style: none;
+    background-color: black;
+    color: white;
+    box-shadow: 0 3px 6px gainsboro;
+}
+.menu ul li{
+    padding: 20px;
+}
+.menu ul li:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0); 
+    cursor: pointer;  
+}
+.service{
+    position: absolute;
+    right: 105px;
+    margin-top: 200px;
+    display: none;
+}
+.service ul{
+    box-shadow: 0 3px 6px gainsboro;
+    padding: 5px;
+    list-style: none;
+    background-color: black;
+    color: white;
+}
+.service ul li{
+    padding: 20px;
+}
+.service ul li:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0); 
+    cursor: pointer; 
+}
+.fa{
+    display: none;
+}
+.header{
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.body{
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+.footer{
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: white;
+}
+
+
+@media screen and (max-width:650px) {
+    .navbar ul li:not(.fa){
+        display: none;
+    }
+    .fa{
+        display: block;
+    }
+}
+
+</style>
+
+<script>
+function show_drop(){
+    document.getElementById("drop").style.display="block"
+}
+function show_activity(){
+    document.getElementById("activity").style.display="block"
+}
+function hide_drop(){
+    document.getElementById("drop").style.display="none"
+}
+function hide_activity(){
+    document.getElementById("activity").style.display="none"
+}
+</script>
+</head>
+<body>
+  <div class="navbar">
+    <h1>Logo</h1>
+
+    <ul>
+        <li>home</li>
+        <li>about</li>
+        <li>contact</li>
+        <li>service</li>
+        <li onclick="show_drop()" class="fa fa-bars"></li>
+    </ul>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+    <div id="drop" class="menu">
+        <ul>
+            <li onclick="hide_activity()">home</li>
+            <li onclick="hide_activity()">about</li>
+            <li onclick="hide_activity()">contact</li>
+            <li onclick="show_activity()">service</li>
+        </ul>
+    </div>
+<div onclick="hide_drop(),hide_activity()" id="activity" class="service">
+    <ul>
+        <li>coding</li>
+        <li>graphics</li>
+        <li>robotics</li>
+    </ul>
+</div>
+<div class="header">
+<h1>Header</h1>
+</div>
+<div class="body">
+    <h1>Content/Body</h1>
+</div>
+<div class="footer">
+    <h1>Footer</h1>
+</div>
+</body>
+</html>
